@@ -1,64 +1,151 @@
 ---
-layout: single
+layout: single-clean
 title: "Research"
 permalink: /research/
-author_profile: true
 ---
 
-## English
+<div class="lang-block" data-lang="en">
+  <div class="page-panel">
+    <div class="section-heading">
+      <p class="section-kicker">Research</p>
+      <h2>Methods and themes behind the work</h2>
+      <p>This page focuses on the analytical backbone: electricity markets, energy AI, storage strategy, and research translation.</p>
+    </div>
+  </div>
 
-This page summarizes the long-term themes behind my work. It focuses on methods, application domains, and public-facing research directions rather than internal company details.
+  <div class="page-panel">
+    <div class="section-heading">
+      <p class="section-kicker">Research Themes</p>
+      <h2>Core domains</h2>
+    </div>
+    <div class="research-grid page-grid">
+      <article class="page-card">
+        <h3>Electricity Markets</h3>
+        <p>Market design, price formation, short-term market behavior, and cross-border mechanisms.</p>
+      </article>
+      <article class="page-card">
+        <h3>Energy AI</h3>
+        <p>Forecasting, probabilistic modeling, optimization, and safe decision systems for complex energy environments.</p>
+      </article>
+      <article class="page-card">
+        <h3>Storage and Flexibility</h3>
+        <p>Battery dispatch, flexibility assets, and market participation under operational constraints.</p>
+      </article>
+      <article class="page-card">
+        <h3>Energy Digitalization</h3>
+        <p>Turning models and workflows into decision systems that are deployable in real organizations.</p>
+      </article>
+    </div>
+  </div>
 
-### Research Themes
+  <div class="page-panel">
+    <div class="section-heading">
+      <p class="section-kicker">Methods</p>
+      <h2>What I work with</h2>
+    </div>
+    <div class="page-grid">
+      <article class="page-card">
+        <h3>Modeling Stack</h3>
+        <p>Time-series forecasting, feature engineering, probabilistic modeling, and optimization.</p>
+      </article>
+      <article class="page-card">
+        <h3>Decision Stack</h3>
+        <p>Constraint-aware decision models, reinforcement learning, and safe AI for energy systems.</p>
+      </article>
+    </div>
+  </div>
 
-- **Electricity markets and market behavior:** market design, price formation, cross-border mechanisms, and short-term market structure.
-- **AI decision systems for energy:** forecasting, optimization, probabilistic modeling, and decision support for complex energy environments.
-- **Storage and flexibility:** operational strategy for batteries and flexible resources across market settings.
-- **Market-oriented energy digitalization:** turning energy data, models, and workflows into usable decision systems for real-world operations.
+  <div class="page-panel">
+    <div class="section-heading">
+      <p class="section-kicker">Selected Public Projects</p>
+      <h2>Representative work</h2>
+    </div>
+    <ul class="publication-list">
+      <li class="publication-list__item">
+        <strong>RL-ADN</strong>
+        <span>An open research environment for energy storage dispatch and deep reinforcement learning.</span>
+      </li>
+      <li class="publication-list__item">
+        <strong>DATALESs</strong>
+        <span>System-theoretic data analytics for local energy systems and green-building coordination.</span>
+      </li>
+      <li class="publication-list__item">
+        <strong>TU Delft campus energy digital twin work</strong>
+        <span>Monitoring, forecasting, and decision-support ideas for campus-scale energy systems.</span>
+      </li>
+    </ul>
+  </div>
+</div>
 
-### Methods
+<div class="lang-block" data-lang="zh">
+  <div class="page-panel">
+    <div class="section-heading">
+      <p class="section-kicker">研究</p>
+      <h2>支撑这些工作的研究方法与主题</h2>
+      <p>这里展示的是方法论底层：电力市场、能源 AI、储能策略与研究转化。</p>
+    </div>
+  </div>
 
-- Time-series forecasting and feature engineering.
-- Optimization and constraint-aware decision models.
-- Reinforcement learning and safe AI for energy systems.
-- Applied market analysis grounded in real trading and operational settings.
+  <div class="page-panel">
+    <div class="section-heading">
+      <p class="section-kicker">研究主题</p>
+      <h2>核心方向</h2>
+    </div>
+    <div class="research-grid page-grid">
+      <article class="page-card">
+        <h3>电力市场</h3>
+        <p>关注市场设计、价格形成、短期市场行为以及跨区机制。</p>
+      </article>
+      <article class="page-card">
+        <h3>能源 AI</h3>
+        <p>关注预测、概率建模、优化以及复杂能源环境下的安全决策系统。</p>
+      </article>
+      <article class="page-card">
+        <h3>储能与灵活性</h3>
+        <p>聚焦储能调度、灵活性资产与市场参与逻辑。</p>
+      </article>
+      <article class="page-card">
+        <h3>能源数字化</h3>
+        <p>把模型与工作流转成组织真正能部署和使用的决策系统。</p>
+      </article>
+    </div>
+  </div>
 
-### Selected Public Projects
+  <div class="page-panel">
+    <div class="section-heading">
+      <p class="section-kicker">方法</p>
+      <h2>我常用的方法栈</h2>
+    </div>
+    <div class="page-grid">
+      <article class="page-card">
+        <h3>建模栈</h3>
+        <p>时间序列预测、特征工程、概率建模与优化。</p>
+      </article>
+      <article class="page-card">
+        <h3>决策栈</h3>
+        <p>约束感知决策模型、强化学习与面向能源系统的安全 AI。</p>
+      </article>
+    </div>
+  </div>
 
-- **RL-ADN:** an open research environment for energy storage dispatch and deep reinforcement learning.
-- **DATALESs:** system-theoretic data analytics for local energy systems and green-building coordination.
-- **TU Delft campus energy digital twin work:** monitoring, forecasting, and decision-support ideas for campus-scale energy systems.
-- **Applied market decision tooling:** translating research ideas into market intelligence and product-oriented workflows.
-
-### Collaboration
-
-I am interested in collaboration on electricity markets, energy AI, storage strategy, research translation, and public-facing energy digitalization projects. For contact details, please visit the [Contact]({{ '/contact/' | relative_url }}) page.
-
-## 中文
-
-本页概述我长期关注的研究方向，重点放在方法、应用场景与公开可讨论的研究主题上，不涉及公司内部细节。
-
-### 研究主题
-
-- **电力市场与市场行为：** 电力市场设计、价格形成、跨区交易机制与短期市场结构。
-- **能源领域的 AI 决策系统：** 预测、优化、概率建模，以及复杂能源环境中的决策支持。
-- **储能与灵活性资源：** 面向不同市场场景的电池与灵活性资产运行策略。
-- **市场化导向的能源数字化：** 将数据、模型与工作流转化为可落地的决策系统。
-
-### 方法
-
-- 时间序列预测与特征工程。
-- 优化与约束感知决策模型。
-- 强化学习与安全 AI 在能源系统中的应用。
-- 基于真实交易与运行场景的市场分析方法。
-
-### 公开项目
-
-- **RL-ADN：** 面向储能调度与深度强化学习的开源研究环境。
-- **DATALESs：** 面向本地能源系统与绿色建筑协同的系统理论数据分析项目。
-- **代尔夫特理工校园能源数字孪生相关工作：** 围绕监测、预测与决策支持展开。
-- **市场决策工具探索：** 将研究方法转化为市场情报与产品化工作流。
-
-### 合作
-
-如果你关注电力市场、能源 AI、储能策略、研究转化或能源数字化实践，欢迎通过 [Contact]({{ '/contact/' | relative_url }}) 页面联系。
+  <div class="page-panel">
+    <div class="section-heading">
+      <p class="section-kicker">公开项目</p>
+      <h2>代表性工作</h2>
+    </div>
+    <ul class="publication-list">
+      <li class="publication-list__item">
+        <strong>RL-ADN</strong>
+        <span>面向储能调度与深度强化学习的开源研究环境。</span>
+      </li>
+      <li class="publication-list__item">
+        <strong>DATALESs</strong>
+        <span>面向本地能源系统与绿色建筑协同的系统理论数据分析项目。</span>
+      </li>
+      <li class="publication-list__item">
+        <strong>代尔夫特理工校园能源数字孪生相关工作</strong>
+        <span>围绕监测、预测与决策支持展开的校园级能源系统探索。</span>
+      </li>
+    </ul>
+  </div>
+</div>

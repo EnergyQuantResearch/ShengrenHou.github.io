@@ -2,6 +2,29 @@
 
 <!-- start custom head snippets -->
 
+<script>
+  (function () {
+    var storageKey = "site-language";
+    var stored = "";
+
+    try {
+      stored = window.localStorage.getItem(storageKey) || "";
+    } catch (error) {
+      stored = "";
+    }
+
+    var browserLanguage = navigator.language || navigator.userLanguage || "en";
+    var resolvedLanguage = stored || (/^zh/i.test(browserLanguage) ? "zh" : "en");
+
+    document.documentElement.setAttribute("data-site-lang", resolvedLanguage);
+    document.documentElement.setAttribute("lang", resolvedLanguage === "zh" ? "zh-CN" : "en");
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
 <link rel="apple-touch-icon" sizes="57x57" href="{{ base_path }}/images/apple-touch-icon-57x57.png?v=M44lzPylqQ">
 <link rel="apple-touch-icon" sizes="60x60" href="{{ base_path }}/images/apple-touch-icon-60x60.png?v=M44lzPylqQ">
 <link rel="apple-touch-icon" sizes="72x72" href="{{ base_path }}/images/apple-touch-icon-72x72.png?v=M44lzPylqQ">

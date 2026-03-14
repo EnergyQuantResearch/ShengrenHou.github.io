@@ -3,21 +3,29 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
+      <div class="masthead__menu-shell">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+            {% for link in site.data.navigation.main %}
+              {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+                {% else %}
+                {% assign domain = base_path %}
+              {% endif %}
+              <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+
+        <div class="site-language-switcher" aria-label="Site language">
+          <button type="button" class="site-language-switcher__option" data-lang-option="en" aria-pressed="false">EN</button>
+          <span class="site-language-switcher__divider">/</span>
+          <button type="button" class="site-language-switcher__option" data-lang-option="zh" aria-pressed="false">中</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

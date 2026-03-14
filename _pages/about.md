@@ -1,94 +1,349 @@
 ---
+layout: home-founder
+title: "Hou Shengren | Founder & Researcher"
 permalink: /
-title: "About Hou Shengren"
-author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-## English
+<div class="lang-block founder-flow" data-lang="en">
+  <section class="founder-hero founder-panel" id="founder-hero">
+    <div class="founder-hero__copy">
+      <p class="founder-hero__eyebrow">Energy technology entrepreneur and researcher</p>
+      <h1>Building decision systems for electricity markets and energy transition.</h1>
+      <p class="founder-hero__lead">
+        I work across entrepreneurship, power trading, and applied research to turn forecasting,
+        optimization, and AI into products and decision workflows that energy organizations can actually use.
+      </p>
+      <div class="founder-actions">
+        <a class="founder-button founder-button--primary" href="{{ '/research/' | relative_url }}">View Research</a>
+        <a class="founder-button founder-button--secondary" href="{{ '/contact/' | relative_url }}">Get in Touch</a>
+      </div>
+    </div>
 
-Hou Shengren is an energy technology entrepreneur and researcher working at the intersection of electricity markets, AI decision systems, and energy digitalization. His work connects academic research, power trading practice, and product thinking across Europe and China.
+    <aside class="founder-hero__aside">
+      <div class="founder-panel founder-hero__meta">
+        <div class="founder-portrait">
+          <img src="{{ '/images/profile_hou.jpg' | relative_url }}" alt="Hou Shengren">
+        </div>
+        <div class="founder-stat-grid">
+          <div class="founder-stat">
+            <p class="founder-stat__label">Current Base</p>
+            <p class="founder-stat__value">Working across China and Europe on market-facing energy technology.</p>
+          </div>
+          <div class="founder-stat">
+            <p class="founder-stat__label">Primary Arenas</p>
+            <p class="founder-stat__value">Electricity markets, energy AI, storage strategy, and digital decision systems.</p>
+          </div>
+          <div class="founder-stat">
+            <p class="founder-stat__label">Recent Roles</p>
+            <p class="founder-stat__value">Reneng Technology, Energy Quant, TU Delft, OTC Flow, and Northpool.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </section>
 
-### Current Focus
+  <section class="founder-section founder-panel" id="current-focus">
+    <div class="section-heading">
+      <p class="section-kicker">Current Focus</p>
+      <h2>What I am building right now</h2>
+      <p>From strategy to tooling, the emphasis is on useful systems rather than abstract claims.</p>
+    </div>
+    <div class="founder-card-grid">
+      <article class="founder-card">
+        <h3>Market Intelligence</h3>
+        <p>Translating fragmented power-market signals into analysis layers that support faster decisions.</p>
+      </article>
+      <article class="founder-card">
+        <h3>Decision Support</h3>
+        <p>Turning forecasting, optimization, and reinforcement learning into workflows for storage, flexibility, and trading teams.</p>
+      </article>
+      <article class="founder-card">
+        <h3>Energy Digitalization</h3>
+        <p>Connecting applied models, product thinking, and operational reality in public-facing energy technology work.</p>
+      </article>
+    </div>
+  </section>
 
-- Building decision-support tools for electricity markets and flexible energy assets.
-- Translating forecasting, optimization, and reinforcement learning research into usable products.
-- Exploring market intelligence and digitalization pathways for storage, virtual power plants, and energy companies.
+  <section class="founder-section founder-panel" id="selected-work">
+    <div class="section-heading">
+      <p class="section-kicker">Selected Work</p>
+      <h2>Founder, operator, researcher</h2>
+      <p>A few public threads that define the current direction.</p>
+    </div>
+    <div class="founder-card-grid">
+      <article class="founder-card">
+        <h3>Reneng Technology</h3>
+        <p>Public-facing work around AI-enabled market intelligence, digital tools, and decision support for the energy sector in China.</p>
+      </article>
+      <article class="founder-card">
+        <h3>Energy Quant</h3>
+        <p>Entrepreneurial exploration focused on energy-market tooling, strategy, and research-to-product translation.</p>
+      </article>
+      <article class="founder-card">
+        <h3>European Power Trading</h3>
+        <p>Work at Northpool and OTC Flow shaped a practical view of short-term markets, price formation, and execution reality.</p>
+      </article>
+    </div>
+  </section>
 
-### Selected Work
+  <section class="founder-section founder-panel" id="research-foundations">
+    <div class="section-heading">
+      <p class="section-kicker">Research Foundations</p>
+      <h2>The analytical base behind the work</h2>
+      <p>My research background still anchors the way I think about products, systems, and markets.</p>
+    </div>
+    <div class="founder-card-grid">
+      <article class="founder-card">
+        <h3>Electricity Markets</h3>
+        <p>Market design, price formation, cross-border mechanisms, and short-term market behavior.</p>
+      </article>
+      <article class="founder-card">
+        <h3>Energy AI</h3>
+        <p>Forecasting, probabilistic modeling, optimization, and safe decision systems for complex energy settings.</p>
+      </article>
+      <article class="founder-card">
+        <h3>Storage and Flexibility</h3>
+        <p>Battery dispatch, flexibility strategy, and market participation logic under operational constraints.</p>
+      </article>
+      <article class="founder-card">
+        <h3>Research Translation</h3>
+        <p>Turning strong methods into public products, workflows, and decision systems that create usable value.</p>
+      </article>
+    </div>
+  </section>
 
-- Founded Energy Quant Research Institution to bridge academic work and applied energy-market tooling.
-- Worked in European short-term power trading at Northpool and OTC Flow, focusing on market analysis, price formation, and strategy development.
-- Building public-facing energy technology work around Reneng Technology, with a focus on AI-enabled market intelligence, decision support, and energy digitalization in China.
+  <section class="founder-section founder-panel" id="selected-publications">
+    <div class="section-heading">
+      <p class="section-kicker">Selected Publications</p>
+      <h2>Representative academic work</h2>
+      <p>Academic publications remain an important part of my credibility, but they support the broader founder story.</p>
+    </div>
+    <ul class="selected-publications__list">
+      <li class="selected-publications__item">
+        <strong>RL-ADN: A high-performance Deep Reinforcement Learning environment for optimal Energy Storage Systems dispatch in active distribution networks</strong>
+        <span><em>Energy and AI</em>, 2025.</span>
+      </li>
+      <li class="selected-publications__item">
+        <strong>Safe Imitation Learning-based Optimal Energy Storage Systems Dispatch in Distribution Networks</strong>
+        <span>arXiv, 2024.</span>
+      </li>
+      <li class="selected-publications__item">
+        <strong>Optimal energy system scheduling using a constraint-aware reinforcement learning algorithm</strong>
+        <span><em>International Journal of Electrical Power &amp; Energy Systems</em>, 2023.</span>
+      </li>
+    </ul>
+    <div class="page-links" style="margin-top: 1rem;">
+      <a class="page-link-chip" href="{{ '/publications/' | relative_url }}">Browse publications</a>
+      <a class="page-link-chip" href="https://scholar.google.com/citations?user=0pHHqwYAAAAJ&hl=zh-CN">Google Scholar</a>
+    </div>
+  </section>
 
-### Research Foundations
+  <section class="founder-section founder-panel" id="recent-news">
+    <div class="section-heading">
+      <p class="section-kicker">Recent News</p>
+      <h2>Public milestones</h2>
+      <p>A short timeline of recent public-facing developments across entrepreneurship, research, and industry work.</p>
+    </div>
+    <ul class="selected-publications__list">
+      <li class="selected-publications__item">
+        <strong>2026</strong>
+        <span>Continuing public-facing energy technology work centered on AI-enabled decision systems and market digitalization.</span>
+      </li>
+      <li class="selected-publications__item">
+        <strong>2025</strong>
+        <span>Awarded the NWO Rubicon Fellowship and won the Netherlands division of the Shenzhen Innovation and Entrepreneurship Competition.</span>
+      </li>
+      <li class="selected-publications__item">
+        <strong>2024</strong>
+        <span>Expanded from doctoral research into entrepreneurship and European short-term power trading roles.</span>
+      </li>
+    </ul>
+    <div class="page-links" style="margin-top: 1rem;">
+      <a class="page-link-chip" href="{{ '/news/' | relative_url }}">View full timeline</a>
+    </div>
+  </section>
 
-- Electricity market design, market behavior, and cross-border trading mechanisms.
-- Time-series forecasting, probabilistic modeling, optimization, and decision support.
-- Reinforcement learning and safe AI for energy systems.
-- Storage, flexibility, and virtual power plant strategy.
+  <section class="founder-section founder-panel contact-cta" id="contact-cta">
+    <div>
+      <p class="section-kicker">Contact</p>
+      <h2>Open to collaboration, speaking, and founder-level energy conversations.</h2>
+      <p>If your work touches electricity markets, storage strategy, energy AI, or research-to-product translation, I am happy to connect.</p>
+    </div>
+    <div class="founder-actions">
+      <a class="founder-button founder-button--primary" href="{{ '/contact/' | relative_url }}">Contact Page</a>
+    </div>
+  </section>
+</div>
 
-### Selected Publications
+<div class="lang-block founder-flow" data-lang="zh">
+  <section class="founder-hero founder-panel" id="founder-hero">
+    <div class="founder-hero__copy">
+      <p class="founder-hero__eyebrow">能源科技创业者与研究者</p>
+      <h1>为电力市场与能源转型构建真正可用的决策系统。</h1>
+      <p class="founder-hero__lead">
+        我的工作连接创业、能源交易与应用研究，把预测、优化与 AI 方法转化为能源组织可以真正使用的产品和决策工作流。
+      </p>
+      <div class="founder-actions">
+        <a class="founder-button founder-button--primary" href="{{ '/research/' | relative_url }}">查看研究</a>
+        <a class="founder-button founder-button--secondary" href="{{ '/contact/' | relative_url }}">联系我</a>
+      </div>
+    </div>
 
-1. *RL-ADN: A high-performance Deep Reinforcement Learning environment for optimal Energy Storage Systems dispatch in active distribution networks* — *Energy and AI*, 2025.
-2. *Safe Imitation Learning-based Optimal Energy Storage Systems Dispatch in Distribution Networks* — arXiv, 2024.
-3. *Optimal energy system scheduling using a constraint-aware reinforcement learning algorithm* — *International Journal of Electrical Power & Energy Systems*, 2023.
+    <aside class="founder-hero__aside">
+      <div class="founder-panel founder-hero__meta">
+        <div class="founder-portrait">
+          <img src="{{ '/images/profile_hou.jpg' | relative_url }}" alt="侯胜任">
+        </div>
+        <div class="founder-stat-grid">
+          <div class="founder-stat">
+            <p class="founder-stat__label">当前工作区域</p>
+            <p class="founder-stat__value">围绕中国与欧洲展开面向市场的能源科技工作。</p>
+          </div>
+          <div class="founder-stat">
+            <p class="founder-stat__label">核心领域</p>
+            <p class="founder-stat__value">电力市场、能源 AI、储能策略与数字化决策系统。</p>
+          </div>
+          <div class="founder-stat">
+            <p class="founder-stat__label">近期角色</p>
+            <p class="founder-stat__value">任能科技、Energy Quant、TU Delft、OTC Flow 与 Northpool。</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </section>
 
-More publications are listed on the [Publications]({{ '/publications/' | relative_url }}) page and on [Google Scholar](https://scholar.google.com/citations?user=0pHHqwYAAAAJ&hl=zh-CN).
+  <section class="founder-section founder-panel" id="current-focus">
+    <div class="section-heading">
+      <p class="section-kicker">当前重点</p>
+      <h2>我现在真正投入的方向</h2>
+      <p>重点不是抽象概念，而是能落到市场和业务中的系统与工具。</p>
+    </div>
+    <div class="founder-card-grid">
+      <article class="founder-card">
+        <h3>市场情报</h3>
+        <p>把分散的电力市场信号转化为可服务于决策的分析层与判断框架。</p>
+      </article>
+      <article class="founder-card">
+        <h3>决策支持</h3>
+        <p>把预测、优化和强化学习落成服务储能、灵活性资源与交易团队的工作流。</p>
+      </article>
+      <article class="founder-card">
+        <h3>能源数字化</h3>
+        <p>把模型、产品思维与实际运营连接起来，推动公开面向市场的能源科技实践。</p>
+      </article>
+    </div>
+  </section>
 
-### Latest News Highlights
+  <section class="founder-section founder-panel" id="selected-work">
+    <div class="section-heading">
+      <p class="section-kicker">代表性工作</p>
+      <h2>创业者、实践者、研究者三条线并行</h2>
+      <p>下面这些公开线索，基本定义了我现在的工作面貌。</p>
+    </div>
+    <div class="founder-card-grid">
+      <article class="founder-card">
+        <h3>任能科技</h3>
+        <p>围绕中国能源行业的 AI 市场情报、数字化工具和决策支持，推进公开面向市场的能源科技工作。</p>
+      </article>
+      <article class="founder-card">
+        <h3>Energy Quant</h3>
+        <p>围绕能源市场工具、战略判断与研究转产品展开创业探索。</p>
+      </article>
+      <article class="founder-card">
+        <h3>欧洲电力交易实践</h3>
+        <p>在 Northpool 与 OTC Flow 的经历，使我对短期市场、价格形成与执行现实有更直接的理解。</p>
+      </article>
+    </div>
+  </section>
 
-- **2026:** Continuing to build public-facing energy technology work focused on AI-enabled decision systems and energy digitalization.
-- **2025:** Received the NWO Rubicon Fellowship and won the Netherlands division of the Shenzhen Innovation and Entrepreneurship Competition.
-- **2024:** Completed doctoral work at TU Delft and expanded research-to-industry work through entrepreneurship and European power trading roles.
+  <section class="founder-section founder-panel" id="research-foundations">
+    <div class="section-heading">
+      <p class="section-kicker">研究基础</p>
+      <h2>这些方法论仍然支撑我的产品和系统判断</h2>
+      <p>研究训练不是背景介绍，而是我今天做创业和产品的重要底层。</p>
+    </div>
+    <div class="founder-card-grid">
+      <article class="founder-card">
+        <h3>电力市场</h3>
+        <p>关注市场设计、价格形成、跨区机制与短期市场行为。</p>
+      </article>
+      <article class="founder-card">
+        <h3>能源 AI</h3>
+        <p>关注预测、概率建模、优化以及复杂能源环境下的安全决策系统。</p>
+      </article>
+      <article class="founder-card">
+        <h3>储能与灵活性</h3>
+        <p>聚焦储能调度、灵活性策略以及市场参与逻辑。</p>
+      </article>
+      <article class="founder-card">
+        <h3>研究转产品</h3>
+        <p>把强方法论变成真正可发布、可使用、可被市场理解的产品与工作流。</p>
+      </article>
+    </div>
+  </section>
 
-[View all updates]({{ '/news/' | relative_url }})
+  <section class="founder-section founder-panel" id="selected-publications">
+    <div class="section-heading">
+      <p class="section-kicker">代表性论文</p>
+      <h2>学术发表仍然是我的重要可信度来源</h2>
+      <p>但在这个站点里，论文是支撑，不再是整站唯一中心。</p>
+    </div>
+    <ul class="selected-publications__list">
+      <li class="selected-publications__item">
+        <strong>RL-ADN: A high-performance Deep Reinforcement Learning environment for optimal Energy Storage Systems dispatch in active distribution networks</strong>
+        <span><em>Energy and AI</em>，2025。</span>
+      </li>
+      <li class="selected-publications__item">
+        <strong>Safe Imitation Learning-based Optimal Energy Storage Systems Dispatch in Distribution Networks</strong>
+        <span>arXiv，2024。</span>
+      </li>
+      <li class="selected-publications__item">
+        <strong>Optimal energy system scheduling using a constraint-aware reinforcement learning algorithm</strong>
+        <span><em>International Journal of Electrical Power &amp; Energy Systems</em>，2023。</span>
+      </li>
+    </ul>
+    <div class="page-links" style="margin-top: 1rem;">
+      <a class="page-link-chip" href="{{ '/publications/' | relative_url }}">查看论文</a>
+      <a class="page-link-chip" href="https://scholar.google.com/citations?user=0pHHqwYAAAAJ&hl=zh-CN">Google Scholar</a>
+    </div>
+  </section>
 
-### Contact
+  <section class="founder-section founder-panel" id="recent-news">
+    <div class="section-heading">
+      <p class="section-kicker">最近动态</p>
+      <h2>近期公开里程碑</h2>
+      <p>这里保留与你理解我当前方向最相关的公开事件。</p>
+    </div>
+    <ul class="selected-publications__list">
+      <li class="selected-publications__item">
+        <strong>2026</strong>
+        <span>继续推进以 AI 决策系统和能源数字化为核心的公开面向市场能源科技工作。</span>
+      </li>
+      <li class="selected-publications__item">
+        <strong>2025</strong>
+        <span>获得荷兰 NWO Rubicon Fellowship，并获得深圳创新创业大赛荷兰赛区冠军。</span>
+      </li>
+      <li class="selected-publications__item">
+        <strong>2024</strong>
+        <span>从博士研究进一步扩展到创业实践与欧洲短期电力交易岗位。</span>
+      </li>
+    </ul>
+    <div class="page-links" style="margin-top: 1rem;">
+      <a class="page-link-chip" href="{{ '/news/' | relative_url }}">查看完整时间线</a>
+    </div>
+  </section>
 
-For collaboration, speaking, or research conversations, please visit the [Contact]({{ '/contact/' | relative_url }}) page.
-
-## 中文
-
-侯胜任是一名能源科技创业者与研究者，长期关注电力市场、人工智能决策系统与能源数字化的交叉问题。他的工作连接学术研究、电力交易实践与产品化思维，覆盖欧洲与中国的能源场景。
-
-### 当前关注
-
-- 面向电力市场与灵活性资产的决策支持工具。
-- 将预测、优化与强化学习研究转化为可用的产品能力。
-- 面向储能、虚拟电厂与能源企业的市场分析、智能决策与数字化路径。
-
-### 代表性工作
-
-- 创立 Energy Quant Research Institution，推动研究成果向能源市场工具与方法转化。
-- 在 Northpool 与 OTC Flow 参与欧洲短期电力交易与策略研究，重点关注市场分析、价格形成与策略开发。
-- 围绕任能科技推进公开面向市场的能源科技工作，聚焦 AI 驱动的市场情报、决策支持与能源数字化。
-
-### 研究基础
-
-- 电力市场设计、市场行为与跨区交易机制。
-- 时间序列预测、概率建模、优化与决策支持。
-- 强化学习与安全 AI 在能源系统中的应用。
-- 储能、灵活性资源与虚拟电厂策略。
-
-### 代表性论文
-
-1. *RL-ADN: A high-performance Deep Reinforcement Learning environment for optimal Energy Storage Systems dispatch in active distribution networks* — *Energy and AI*, 2025。
-2. *Safe Imitation Learning-based Optimal Energy Storage Systems Dispatch in Distribution Networks* — arXiv, 2024。
-3. *Optimal energy system scheduling using a constraint-aware reinforcement learning algorithm* — *International Journal of Electrical Power & Energy Systems*, 2023。
-
-完整论文列表见 [Publications]({{ '/publications/' | relative_url }}) 页面与 [Google Scholar](https://scholar.google.com/citations?user=0pHHqwYAAAAJ&hl=zh-CN)。
-
-### 最近更新
-
-- **2026：** 持续推进公开面向市场的能源科技工作，重点聚焦 AI 决策系统与能源数字化。
-- **2025：** 获得荷兰 NWO Rubicon Fellowship，并获得深圳创新创业大赛荷兰赛区冠军。
-- **2024：** 完成代尔夫特理工大学博士阶段研究，并进一步拓展创业与欧洲电力交易实践。
-
-[查看全部动态]({{ '/news/' | relative_url }})
-
-### 联系方式
-
-合作交流、公开演讲或研究讨论可前往 [Contact]({{ '/contact/' | relative_url }}) 页面。
+  <section class="founder-section founder-panel contact-cta" id="contact-cta">
+    <div>
+      <p class="section-kicker">联系</p>
+      <h2>欢迎围绕能源、创业、研究转化与公开合作展开交流。</h2>
+      <p>如果你的工作涉及电力市场、储能策略、能源 AI 或研究转产品，我很愿意进一步沟通。</p>
+    </div>
+    <div class="founder-actions">
+      <a class="founder-button founder-button--primary" href="{{ '/contact/' | relative_url }}">联系页面</a>
+    </div>
+  </section>
+</div>

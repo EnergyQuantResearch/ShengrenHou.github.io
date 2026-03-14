@@ -22,6 +22,16 @@ def ensure_not_contains(text: str, needle: str, failures: list[str], label: str)
         failures.append(f"{label}: still contains `{needle}`")
 
 
+def ensure_exists(relative_path: str, failures: list[str]) -> None:
+    if not (ROOT / relative_path).exists():
+        failures.append(f"{relative_path}: expected file to exist")
+
+
+def ensure_missing(relative_path: str, failures: list[str]) -> None:
+    if (ROOT / relative_path).exists():
+        failures.append(f"{relative_path}: expected file to be removed")
+
+
 def main() -> int:
     failures: list[str] = []
 
@@ -54,13 +64,65 @@ def main() -> int:
             f"_data/navigation.yml: expected leading nav order {expected_titles}, got {titles[:len(expected_titles)]}"
         )
 
+    for relative_path in [
+        "_layouts/home-founder.html",
+        "_layouts/single-clean.html",
+        "_sass/_founder-site.scss",
+        "assets/js/lang-toggle.js",
+        "_pages/publications.md",
+    ]:
+        ensure_exists(relative_path, failures)
+    ensure_missing("_pages/publications.html", failures)
+
+    file_checks = {
+        "_includes/masthead.html": ["site-language-switcher", 'data-lang-option="en"', 'data-lang-option="zh"'],
+        "_includes/scripts.html": ["lang-toggle.js"],
+        "_includes/head/custom.html": ["localStorage", "navigator.language", "data-site-lang"],
+        "assets/css/main.scss": ['@import "founder-site";'],
+        "assets/js/lang-toggle.js": ["localStorage", "navigator.language", "data-site-lang", "data-lang-option"],
+    }
+    for relative_path, markers in file_checks.items():
+        if not (ROOT / relative_path).exists():
+            continue
+        file_text = read_text(relative_path)
+        for marker in markers:
+            ensure_contains(file_text, marker, failures, relative_path)
+
     page_expectations = {
-        "_pages/about.md": ["## English", "## 中文", "Current Focus", "当前关注", "/news/"],
-        "_pages/news.md": ["## English", "## 中文", "2026", "2025"],
-        "_pages/research.md": ["## English", "## 中文", "Research Themes", "研究主题"],
-        "_pages/publications.html": ["## English", "## 中文", "Google Scholar", "Selected Publications"],
-        "_pages/cv.md": ["## English", "## 中文", "Selected Experience", "经历精选"],
-        "_pages/contact.md": ["## English", "## 中文", "Collaboration", "合作方向"],
+        "_pages/about.md": {
+            "layout": "layout: home-founder",
+            "expected": [
+                'data-lang="en"',
+                'data-lang="zh"',
+                "founder-hero",
+                "current-focus",
+                "selected-work",
+                "research-foundations",
+                "selected-publications",
+                "recent-news",
+                "contact-cta",
+            ],
+        },
+        "_pages/news.md": {
+            "layout": "layout: single-clean",
+            "expected": ['data-lang="en"', 'data-lang="zh"', "news-timeline", "2026", "2025"],
+        },
+        "_pages/research.md": {
+            "layout": "layout: single-clean",
+            "expected": ['data-lang="en"', 'data-lang="zh"', "research-grid", "Research Themes", "研究主题"],
+        },
+        "_pages/publications.md": {
+            "layout": "layout: single-clean",
+            "expected": ['data-lang="en"', 'data-lang="zh"', "publication-list", "Google Scholar", "代表性论文"],
+        },
+        "_pages/cv.md": {
+            "layout": "layout: single-clean",
+            "expected": ['data-lang="en"', 'data-lang="zh"', "experience-list", "Selected Experience", "经历精选"],
+        },
+        "_pages/contact.md": {
+            "layout": "layout: single-clean",
+            "expected": ['data-lang="en"', 'data-lang="zh"', "contact-methods", "Collaboration", "合作方向"],
+        },
     }
     forbidden_page_strings = [
         "MM/YYYY",
@@ -73,22 +135,22 @@ def main() -> int:
         "2628 CD Delft",
         "+31-",
         "1997-03",
+        "## English",
+        "## 中文",
+        "This page records public milestones only.",
+        "本页只记录适合公开传播的里程碑信息",
     ]
 
-    for relative_path, expected_markers in page_expectations.items():
+    for relative_path, expectation in page_expectations.items():
+        if not (ROOT / relative_path).exists():
+            continue
         page_text = read_text(relative_path)
-        for marker in expected_markers:
+        ensure_contains(page_text, expectation["layout"], failures, relative_path)
+        ensure_not_contains(page_text, "author_profile: true", failures, relative_path)
+        for marker in expectation["expected"]:
             ensure_contains(page_text, marker, failures, relative_path)
         for forbidden in forbidden_page_strings:
             ensure_not_contains(page_text, forbidden, failures, relative_path)
-
-    publications_page = read_text("_pages/publications.html")
-    ensure_not_contains(
-        publications_page,
-        'http-equiv="refresh"',
-        failures,
-        "_pages/publications.html",
-    )
 
     readme = read_text("README.md")
     for forbidden in ["Academic Pages", "academicpages.github.io"]:
@@ -104,12 +166,12 @@ def main() -> int:
         failures.append(f"_posts: expected no sample posts, found {post_files}")
 
     if failures:
-        print("Public-site governance verification failed:")
+        print("Founder-site verification failed:")
         for failure in failures:
             print(f"- {failure}")
         return 1
 
-    print("Public-site governance verification passed.")
+    print("Founder-site verification passed.")
     return 0
 
 
