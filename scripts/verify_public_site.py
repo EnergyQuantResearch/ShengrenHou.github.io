@@ -88,6 +88,7 @@ def main() -> int:
                 'excerpt: "Founder website of Hou Shengren',
                 'data-lang="en"',
                 'data-lang="zh"',
+                "用 AI 与市场机制，重构能源系统的决策效率。",
                 "Beijing Reneng Technology, TU Delft, and Northpool.",
                 "founder-hero",
                 "current-focus",
@@ -156,6 +157,7 @@ def main() -> int:
         "Energy Quant CEO",
         "Launched the renewed founder-and-researcher public website.",
         "发布新版 Founder + Researcher 个人公共网站。",
+        "为电力市场与能源转型构建真正可落地的决策系统。",
     ]
 
     for relative_path, expectation in page_expectations.items():

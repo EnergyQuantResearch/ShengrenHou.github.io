@@ -185,7 +185,7 @@ redirect_from:
   <section class="founder-hero founder-panel" id="founder-hero">
     <div class="founder-hero__copy">
       <p class="founder-hero__eyebrow">能源科技创业者与研究者</p>
-      <h1>为电力市场与能源转型构建真正可落地的决策系统。</h1>
+      <h1>用 AI 与市场机制，重构能源系统的决策效率。</h1>
       <p class="founder-hero__lead">
         我的工作连接能源科技创业、市场实践与应用研究，把预测、优化与 AI 方法做成可在真实业务中落地的产品、工具与决策工作流。
       </p>
