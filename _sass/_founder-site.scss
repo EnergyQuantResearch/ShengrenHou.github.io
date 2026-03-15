@@ -45,13 +45,22 @@ h6,
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
 }
 
-[data-lang] {
+[data-lang="en"] {
+  display: block;
+}
+
+[data-lang="zh"] {
   display: none;
 }
 
 html[data-site-lang="en"] [data-lang="en"],
 html[data-site-lang="zh"] [data-lang="zh"] {
   display: block;
+}
+
+html[data-site-lang="en"] [data-lang="zh"],
+html[data-site-lang="zh"] [data-lang="en"] {
+  display: none;
 }
 
 .masthead {
@@ -540,12 +549,13 @@ html[data-site-lang="zh"] [data-lang="zh"] {
   }
 
   .masthead__menu-shell {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
   }
 
   .site-language-switcher {
-    margin-left: auto;
+    flex: 0 0 auto;
+    margin-left: 0.5rem;
   }
 }
 
@@ -573,6 +583,7 @@ html[data-site-lang="zh"] [data-lang="zh"] {
   }
 
   .site-language-switcher {
-    align-self: flex-end;
+    margin-left: 0.35rem;
+    padding: 0.28rem 0.35rem;
   }
 }
