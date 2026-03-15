@@ -38,23 +38,23 @@ def main() -> int:
     config = read_text("_config.yml")
     ensure_contains(
         config,
-        'url: "https://energyquantresearch.github.io"',
+        'url: "https://shengrenhou.github.io"',
         failures,
         "_config.yml",
     )
     ensure_contains(
         config,
-        'baseurl: "/ShengrenHou.github.io"',
+        'baseurl: ""',
         failures,
         "_config.yml",
     )
     ensure_contains(
         config,
-        'repository: "EnergyQuantResearch/ShengrenHou.github.io"',
+        'repository: "ShengrenHOU/shengrenhou.github.io"',
         failures,
         "_config.yml",
     )
-    ensure_not_contains(config, "https://shengrenhou.github.io", failures, "_config.yml")
+    ensure_not_contains(config, "https://energyquantresearch.github.io", failures, "_config.yml")
 
     nav = read_text("_data/navigation.yml")
     titles = re.findall(r'title:\s*"([^"]+)"', nav)

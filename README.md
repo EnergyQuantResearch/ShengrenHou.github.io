@@ -36,23 +36,23 @@ The main site pages are maintained in both English and Chinese on the same route
 
 ## Publishing model
 
-This repository is treated as an organization-owned GitHub Pages project site.
+This repository is now treated as a personal GitHub Pages user site.
 
-- Target canonical public URL: `https://energyquantresearch.github.io/ShengrenHou.github.io/`
-- Repository path: `EnergyQuantResearch/ShengrenHou.github.io`
+- Target canonical public URL: `https://shengrenhou.github.io/`
+- Repository path: `ShengrenHOU/shengrenhou.github.io`
 - Default branch: `master`
 - No custom domain is configured in this round.
 
-## Verified publishing reality on March 14, 2026
+## Verified publishing reality on March 15, 2026
 
-- `git remote -v` points to `EnergyQuantResearch/ShengrenHou.github.io`.
-- The current checked-out branch is `master`.
+- The repository ownership was transferred from `EnergyQuantResearch` to `ShengrenHOU`.
+- The repository name was normalized to `shengrenhou.github.io`.
+- `git remote -v` should point to `ShengrenHOU/shengrenhou.github.io`.
 - No `CNAME` file exists in the repository.
-- Before this governance pass, `_config.yml` did not define `url`, `baseurl`, or `repository`.
-- `https://shengrenhou.github.io` returned HTTP `404` when checked from this environment on March 14, 2026.
-- `https://energyquantresearch.github.io/ShengrenHou.github.io/` did not return a usable response from this environment before the Pages configuration was updated, so the old personal domain must not be treated as canonical.
+- `_config.yml` is configured for a personal Pages site with `baseurl: ""`.
+- The canonical public site is `https://shengrenhou.github.io/`.
 
 ## Deployment notes
 
 - GitHub Actions builds the Jekyll site and deploys the generated `_site` output to GitHub Pages.
-- The workflow is configured for organization-owned project Pages hosting rather than personal-username Pages hosting.
+- The workflow and `_config.yml` are configured for personal Pages hosting at `https://shengrenhou.github.io/`.

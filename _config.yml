@@ -11,9 +11,9 @@
 name: &name "Hou Shengren"
 title: "Hou Shengren | 侯胜任"
 description: "Energy technology entrepreneur and researcher"
-url: "https://energyquantresearch.github.io"
-baseurl: "/ShengrenHou.github.io"
-repository: "EnergyQuantResearch/ShengrenHou.github.io"
+url: "https://shengrenhou.github.io"
+baseurl: ""
+repository: "ShengrenHOU/shengrenhou.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -26,7 +26,7 @@ author:
   bio              : "Energy technology entrepreneur and researcher"
   location         : "Europe / China"
   employer         :
-  uri              : "https://energyquantresearch.github.io/ShengrenHou.github.io/"
+  uri              : "https://shengrenhou.github.io/"
   email            : "houshengren97@gmail.com" 
 
   # Academic websites
