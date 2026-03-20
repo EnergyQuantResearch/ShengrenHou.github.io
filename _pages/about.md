@@ -150,13 +150,13 @@ redirect_from:
     <div class="section-heading">
       <p class="section-kicker">Selected Essays</p>
       <h2>Thoughts on AI, power markets, entrepreneurship, and life</h2>
-      <p>A Chinese-first writing space with English subtitles and abstracts.</p>
+      <p>A bilingual longform writing space for ideas, judgment, and reflection.</p>
     </div>
     <div class="essay-highlight-grid">
       {% for essay in featured_essays limit:2 %}
       <article class="page-card essay-card">
         <p class="essay-card__date">{{ essay.date | date: "%Y-%m-%d" }}</p>
-        <h3><a href="{{ essay.url | relative_url }}">{{ essay.title_zh | default: essay.title }}</a></h3>
+        <h3><a href="{{ essay.url | relative_url }}">{{ essay.title }}</a></h3>
         <p class="essay-card__subtitle">{{ essay.subtitle }}</p>
         <p class="essay-card__meta">{{ essay.tags | join: " · " }}</p>
         <p class="essay-card__excerpt">{{ essay.excerpt }}</p>
@@ -343,16 +343,16 @@ redirect_from:
     <div class="section-heading">
       <p class="section-kicker">随笔</p>
       <h2>关于 AI、电力市场、创业与人生的长期表达</h2>
-      <p>中文为主写作，配英文副标题与英文摘要。</p>
+      <p>中英双语长文表达，用来承载判断、思考与个人立场。</p>
     </div>
     <div class="essay-highlight-grid">
       {% for essay in featured_essays limit:2 %}
       <article class="page-card essay-card">
         <p class="essay-card__date">{{ essay.date | date: "%Y-%m-%d" }}</p>
         <h3><a href="{{ essay.url | relative_url }}">{{ essay.title_zh | default: essay.title }}</a></h3>
-        <p class="essay-card__subtitle">{{ essay.subtitle }}</p>
+        <p class="essay-card__subtitle">{{ essay.subtitle_zh | default: essay.subtitle }}</p>
         <p class="essay-card__meta">{{ essay.tags | join: " · " }}</p>
-        <p class="essay-card__excerpt">{{ essay.excerpt }}</p>
+        <p class="essay-card__excerpt">{{ essay.excerpt_zh | default: essay.excerpt }}</p>
         <a class="page-link-chip" href="{{ essay.url | relative_url }}">阅读随笔</a>
       </article>
       {% endfor %}

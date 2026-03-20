@@ -102,6 +102,12 @@ def main() -> int:
                 "research-foundations",
                 "selected-publications",
                 "selected-essays",
+                "essay.title_zh",
+                "essay.title",
+                "essay.subtitle_zh",
+                "essay.subtitle",
+                "essay.excerpt_zh",
+                "essay.excerpt",
                 "recent-news",
                 "contact-cta",
             ],
@@ -116,6 +122,12 @@ def main() -> int:
                 "Selected Essays",
                 "随笔",
                 "site.essays",
+                "essay.title_zh",
+                "essay.title",
+                "essay.subtitle_zh",
+                "essay.subtitle",
+                "essay.excerpt_zh",
+                "essay.excerpt",
                 "Read Essay",
                 "阅读随笔",
             ],
@@ -163,7 +175,10 @@ def main() -> int:
             "expected": [
                 'title: "Do Not Wait"',
                 'title_zh: "不要等"',
-                "english_abstract:",
+                "subtitle_zh:",
+                "excerpt_zh:",
+                'data-lang="zh"',
+                'data-lang="en"',
                 "tags:",
                 "AI",
                 "Life",
@@ -191,7 +206,26 @@ def main() -> int:
         "Launched the renewed founder-and-researcher public website.",
         "发布新版 Founder + Researcher 个人公共网站。",
         "为电力市场与能源转型构建真正可落地的决策系统。",
+        "english_abstract:",
     ]
+
+    layout_expectations = {
+        "_layouts/essay.html": [
+            "page.title_zh",
+            "page.title",
+            "page.subtitle_zh",
+            "page.subtitle",
+            "page.bilibili_embed",
+            "essay-video",
+            'data-lang="en"',
+            'data-lang="zh"',
+        ]
+    }
+
+    for relative_path, markers in layout_expectations.items():
+        layout_text = read_text(relative_path)
+        for marker in markers:
+            ensure_contains(layout_text, marker, failures, relative_path)
 
     for relative_path, expectation in page_expectations.items():
         if not (ROOT / relative_path).exists():

@@ -30,13 +30,14 @@ layout: default
         <header class="essay-header">
           <div class="lang-block" data-lang="en">
             <p class="page-heading__eyebrow">Essay</p>
+            <h1 class="essay-title" itemprop="headline">{{ page.title }}</h1>
+            {% if page.subtitle %}<p class="essay-subtitle">{{ page.subtitle }}</p>{% endif %}
           </div>
           <div class="lang-block" data-lang="zh">
             <p class="page-heading__eyebrow">随笔</p>
+            <h1 class="essay-title" itemprop="headline">{{ page.title_zh | default: page.title }}</h1>
+            {% if page.subtitle_zh %}<p class="essay-subtitle">{{ page.subtitle_zh }}</p>{% elsif page.subtitle %}<p class="essay-subtitle">{{ page.subtitle }}</p>{% endif %}
           </div>
-
-          <h1 class="essay-title" itemprop="headline">{{ page.title_zh | default: page.title }}</h1>
-          {% if page.subtitle %}<p class="essay-subtitle">{{ page.subtitle }}</p>{% endif %}
 
           <div class="essay-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
@@ -50,31 +51,36 @@ layout: default
           </div>
         </header>
 
+        {% if page.bilibili_embed %}
+        <div class="essay-video">
+          <div class="lang-block" data-lang="en">
+            <p class="essay-video__label">Related video</p>
+          </div>
+          <div class="lang-block" data-lang="zh">
+            <p class="essay-video__label">相关视频</p>
+          </div>
+          <div class="essay-video__frame">
+            <iframe
+              src="{{ page.bilibili_embed }}"
+              title="{{ page.title }}"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        {% endif %}
+
         <div class="essay-body" itemprop="articleBody">
           {{ content }}
         </div>
       </section>
 
-      {% if page.english_abstract %}
-      <section class="page-panel essay-abstract">
-        <div class="lang-block" data-lang="en">
-          <h2>English Abstract</h2>
-        </div>
-        <div class="lang-block" data-lang="zh">
-          <h2>英文摘要</h2>
-        </div>
-        <div class="essay-abstract__content">
-          {{ page.english_abstract | markdownify }}
-        </div>
-      </section>
-      {% endif %}
-
       <nav class="page-panel essay-nav">
         <div class="lang-block" data-lang="en">
           <div class="essay-nav__links">
             <a class="page-link-chip" href="{{ '/essays/' | relative_url }}">Back to Essays</a>
-            {% if newer_essay %}<a class="page-link-chip" href="{{ newer_essay.url | relative_url }}">Newer: {{ newer_essay.title_zh | default: newer_essay.title }}</a>{% endif %}
-            {% if older_essay %}<a class="page-link-chip" href="{{ older_essay.url | relative_url }}">Older: {{ older_essay.title_zh | default: older_essay.title }}</a>{% endif %}
+            {% if newer_essay %}<a class="page-link-chip" href="{{ newer_essay.url | relative_url }}">Newer: {{ newer_essay.title }}</a>{% endif %}
+            {% if older_essay %}<a class="page-link-chip" href="{{ older_essay.url | relative_url }}">Older: {{ older_essay.title }}</a>{% endif %}
           </div>
         </div>
         <div class="lang-block" data-lang="zh">

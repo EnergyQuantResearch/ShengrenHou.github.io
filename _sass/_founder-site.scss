@@ -627,6 +627,35 @@ html[data-site-lang="zh"] .founder-hero h1 {
   line-height: 1.9;
 }
 
+.essay-video {
+  margin: 0 0 1.45rem;
+}
+
+.essay-video__label {
+  margin: 0 0 0.6rem;
+  color: var(--founder-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.essay-video__frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.1rem;
+  background: rgba(16, 60, 54, 0.08);
+  aspect-ratio: 16 / 9;
+}
+
+.essay-video__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .essay-body h2,
 .essay-body h3 {
   margin-top: 2.1rem;
@@ -650,16 +679,6 @@ html[data-site-lang="zh"] .founder-hero h1 {
 }
 
 .essay-body blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-.essay-abstract h2 {
-  margin-top: 0;
-  padding: 0;
-  border: 0;
-}
-
-.essay-abstract__content p:last-child {
   margin-bottom: 0;
 }
 
