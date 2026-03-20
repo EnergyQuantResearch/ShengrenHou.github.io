@@ -67,6 +67,7 @@ def main() -> int:
         "_pages/publications.md",
         "_pages/essays.md",
         "_essays/2026-03-17-do-not-wait.md",
+        "_essays/2026-03-20-research-journey-notes.md",
     ]:
         ensure_exists(relative_path, failures)
     ensure_missing("_pages/publications.html", failures)
@@ -185,6 +186,23 @@ def main() -> int:
                 "Power Markets",
             ],
         },
+        "_essays/2026-03-20-research-journey-notes.md": {
+            "layout": "layout: essay",
+            "expected": [
+                'title: "Ten Years of Study and Research"',
+                'title_zh: "十年研学路：关于模仿学习、科研与成长的几点感悟"',
+                "subtitle_zh:",
+                "excerpt_zh:",
+                "source_title:",
+                "source_name:",
+                "source_url:",
+                "source_date:",
+                'data-lang="zh"',
+                'data-lang="en"',
+                "模仿学习：做聪明的决策",
+                "The Value of Imitation Learning",
+            ],
+        },
     }
     forbidden_page_strings = [
         "MM/YYYY",
@@ -217,6 +235,10 @@ def main() -> int:
             "page.subtitle",
             "page.bilibili_embed",
             "essay-video",
+            "page.source_title",
+            "page.source_name",
+            "page.source_url",
+            "essay-source",
             'data-lang="en"',
             'data-lang="zh"',
         ]

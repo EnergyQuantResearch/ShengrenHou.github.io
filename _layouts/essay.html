@@ -75,6 +75,30 @@ layout: default
         </div>
       </section>
 
+      {% if page.source_title or page.source_url %}
+      <section class="page-panel essay-source">
+        <div class="lang-block" data-lang="en">
+          <h2>Source Note</h2>
+          <p>
+            Adapted from the WeChat article
+            {% if page.source_url %}<a href="{{ page.source_url }}">{{ page.source_title }}</a>{% else %}{{ page.source_title }}{% endif %}
+            {% if page.source_name %} published by {{ page.source_name }}{% endif %}
+            {% if page.source_date %} on {{ page.source_date }}{% endif %}.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="zh">
+          <h2>来源说明</h2>
+          <p>
+            整理自
+            {% if page.source_name %}{{ page.source_name }}{% endif %}
+            发布的微信文章
+            {% if page.source_url %}<a href="{{ page.source_url }}">{{ page.source_title }}</a>{% else %}{{ page.source_title }}{% endif %}
+            {% if page.source_date %}（{{ page.source_date }}）{% endif %}。
+          </p>
+        </div>
+      </section>
+      {% endif %}
+
       <nav class="page-panel essay-nav">
         <div class="lang-block" data-lang="en">
           <div class="essay-nav__links">

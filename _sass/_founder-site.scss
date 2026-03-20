@@ -688,6 +688,23 @@ html[data-site-lang="zh"] .founder-hero h1 {
   gap: 0.8rem;
 }
 
+.essay-source h2 {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+  padding: 0;
+  border: 0;
+}
+
+.essay-source p {
+  margin: 0;
+  color: var(--founder-muted);
+  line-height: 1.7;
+}
+
+.essay-source a {
+  color: var(--founder-accent);
+}
+
 .contact-cta {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) auto;
